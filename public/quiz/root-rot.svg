@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#fffbeb"/>
+  <rect x="140" y="220" width="520" height="180" rx="32" fill="#78350f"/>
+  <path d="M400 120 C330 140, 290 180, 300 250 C320 310, 360 340, 400 360 C450 332, 500 300, 510 240 C510 175, 470 145, 400 120Z" fill="#4ade80"/>
+  <path d="M398 250 C370 286, 352 320, 342 360" stroke="#7c2d12" stroke-width="10" fill="none"/>
+  <path d="M406 250 C434 288, 454 322, 462 364" stroke="#7c2d12" stroke-width="10" fill="none"/>
+  <text x="40" y="60" font-size="34" fill="#7c2d12" font-family="Arial">Sample: Root Browning Pattern</text>
+</svg>

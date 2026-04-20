@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "crop": "strawberry",
+  "scenario": "winter_greenhouse_14_day",
+  "target_ranges": {
+    "rootMoistureScore": { "min": 50, "max": 75 },
+    "lightScore": { "min": 55, "max": 85 },
+    "diseaseRisk": { "min": 0, "max": 35 },
+    "costScore": { "min": 60, "max": 90 }
+  },
+  "action_effects": {
+    "irrigation": {
+      "low": { "rootMoistureScore": -8, "diseaseRisk": -2 },
+      "normal": { "rootMoistureScore": 4, "diseaseRisk": 0 },
+      "high": { "rootMoistureScore": 10, "diseaseRisk": 8 }
+    },
+    "heating": {
+      "low": { "growthScore": -4, "costScore": 2 },
+      "normal": { "growthScore": 2, "costScore": -3 },
+      "high": { "growthScore": 5, "costScore": -8 }
+    },
+    "ventilation": {
+      "low": { "diseaseRisk": 5, "growthScore": 1 },
+      "normal": { "diseaseRisk": -2, "growthScore": 0 },
+      "high": { "diseaseRisk": -6, "growthScore": -1 }
+    },
+    "lighting": {
+      "off": { "lightScore": -6, "costScore": 1 },
+      "auto": { "lightScore": 2, "costScore": -2 },
+      "on": { "lightScore": 8, "costScore": -6 }
+    }
+  },
+  "condition_modifiers": {
+    "outside_temp_level": {
+      "low": { "growthScore": -4, "diseaseRisk": 2 },
+      "normal": { "growthScore": 1, "diseaseRisk": -1 },
+      "high": { "growthScore": 0, "diseaseRisk": 3 }
+    },
+    "sunlight_level": {
+      "low": { "lightScore": -6, "growthScore": -2 },
+      "normal": { "lightScore": 1, "growthScore": 1 },
+      "high": { "lightScore": 4, "growthScore": 2 }
+    },
+    "disease_pressure_level": {
+      "low": { "diseaseRisk": -4 },
+      "normal": { "diseaseRisk": 2 },
+      "high": { "diseaseRisk": 7 }
+    }
+  },
+  "disease_rules": {
+    "high_irrigation_low_ventilation": 10,
+    "low_sunlight_low_ventilation": 7,
+    "stress_streak_multiplier": 2,
+    "stress_trigger_threshold": 2
+  },
+  "yield_formula_weights": {
+    "growthScore": 0.35,
+    "lightScore": 0.25,
+    "costScore": 0.15,
+    "diseaseRiskPenalty": 0.35
+  },
+  "feedback_templates": {
+    "summary": {
+      "good": "오늘 제어 전략은 전반적으로 안정적이었고 포장 상태가 개선되었습니다.",
+      "neutral": "오늘 제어 전략은 대체로 유지되었지만 일부 지표 변동이 있었습니다.",
+      "bad": "오늘 제어 전략으로 인해 포장 스트레스가 증가했습니다."
+    },
+    "cause": {
+      "high_disease": "높은 습도·낮은 환기로 병해 위험이 상승했습니다.",
+      "low_light": "일사 부족 대비 조광 보정이 부족해 광합성 효율이 떨어졌습니다.",
+      "high_cost": "과도한 난방/조명 사용으로 비용 효율이 하락했습니다.",
+      "balanced": "관수·환기·난방 균형이 맞아 주요 지표가 안정적이었습니다."
+    },
+    "recommendation": {
+      "reduce_risk": "내일은 환기를 한 단계 높이고 관수 과다를 피하세요.",
+      "boost_light": "내일은 일사 수준을 보고 조명을 auto/on으로 보정하세요.",
+      "control_cost": "내일은 난방/조명을 normal 또는 auto 중심으로 운영해 비용을 관리하세요.",
+      "maintain": "내일도 현재 균형 전략을 유지하면서 병해 리스크만 점검하세요."
+    }
+  },
+  "grade_thresholds": {
+    "S": 90,
+    "A": 80,
+    "B": 70,
+    "C": 60
+  }
+}
