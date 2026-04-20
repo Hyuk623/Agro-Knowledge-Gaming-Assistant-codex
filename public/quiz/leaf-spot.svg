@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#ecfdf5"/>
+  <ellipse cx="400" cy="250" rx="240" ry="150" fill="#22c55e"/>
+  <circle cx="330" cy="220" r="28" fill="#7f1d1d"/>
+  <circle cx="390" cy="275" r="24" fill="#991b1b"/>
+  <circle cx="460" cy="220" r="22" fill="#7f1d1d"/>
+  <text x="40" y="60" font-size="34" fill="#14532d" font-family="Arial">Sample: Strawberry Leaf Spot Pattern</text>
+</svg>

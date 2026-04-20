@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#f8fafc"/>
+  <ellipse cx="400" cy="250" rx="240" ry="150" fill="#16a34a"/>
+  <g fill="#ffffff" opacity="0.88">
+    <circle cx="320" cy="210" r="18"/>
+    <circle cx="360" cy="250" r="20"/>
+    <circle cx="420" cy="220" r="19"/>
+    <circle cx="480" cy="265" r="17"/>
+  </g>
+  <text x="40" y="60" font-size="34" fill="#0f172a" font-family="Arial">Sample: Powdery Surface Growth</text>
+</svg>
